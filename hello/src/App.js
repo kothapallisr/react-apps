@@ -10,7 +10,7 @@ import Form from './components/Form'
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Form />
     </div>
     // <div className="App">
