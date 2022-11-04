@@ -7,11 +7,12 @@ import Inline from './components/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form'
+import LifecycleA from './components/LifecycleA';
 
 function App() {
   return (
     <div className='App'>
-      <Form />
+      <LifecycleA/>
     </div>
     // <div className="App">
     //  <h2 className='error'>Error</h2>
