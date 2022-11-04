@@ -1,12 +1,10 @@
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
 
 function App() {
   return (
     <div className='App'>
-      <ClickCounter name='Sridhar'/>
-      <HoverCounter name='Sridhar'/>
+      <ClickCounterTwo/>
     </div>
 
   );
