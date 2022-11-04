@@ -6,7 +6,7 @@ export class HoverCounter extends Component {
   render() {
     const {count, increaseCount} = this.props
     return (
-      <div><h2 onMouseOver={increaseCount}>Hovered {count} times</h2></div>
+      <div><h2 onMouseOver={increaseCount}>{this.props.name} Hovered {count} times</h2></div>
     )
   }
 }
