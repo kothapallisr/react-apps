@@ -1,10 +1,14 @@
 import React from 'react'
+import { UserConsumer } from './userContext'
 
 function ComponentF() {
   return (
-    <div>
-      Hello Sridhar
-    </div>
+    <UserConsumer>
+      {(username) => {
+        return <div>Hello {username}</div>
+      }}
+      
+    </UserConsumer>
   )
 }
 
