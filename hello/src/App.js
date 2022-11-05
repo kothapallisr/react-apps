@@ -8,7 +8,7 @@ function App() {
     <div className='App'>
       <ClickCounterTwo/>
       <HoverCounterTwo/>
-      <User name={() => 'Sridhar'}/>
+      <User name={(isLoggedIn) => isLoggedIn ? 'Sridhar' : 'Guest'}/>
     </div>
 
   );
