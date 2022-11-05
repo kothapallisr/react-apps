@@ -1,14 +1,18 @@
 import './App.css';
 import ClickCounterTwo from './components/ClickCounterTwo';
+import Counter from './components/Counter';
 import HoverCounterTwo from './components/HoverCounterTwo';
-import User from './components/User';
+
 
 function App() {
   return (
     <div className='App'>
-      <ClickCounterTwo/>
-      <HoverCounterTwo/>
-      <User render={(isLoggedIn) => isLoggedIn ? 'Sridhar' : 'Guest'}/>
+      <Counter render={(count, incrementCounter) => (
+        <ClickCounterTwo count={count} incrementCounter={incrementCounter}/>
+      )}/>
+      <Counter render={(count, incrementCounter) => (
+        <HoverCounterTwo count={count} incrementCounter={incrementCounter}/>
+      )}/>
     </div>
 
   );
