@@ -15,9 +15,10 @@ function App() {
       <Counter render={(count, incrementCounter) => (
         <HoverCounterTwo count={count} incrementCounter={incrementCounter}/>
       )}/> */}
-      <UserProvider value='Sridhar'>
+      {/* <UserProvider value='Sridhar'>
         <ComponentC/>
-      </UserProvider>
+      </UserProvider> */}
+      <ComponentC/>
     </div>
 
   );
