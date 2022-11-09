@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 import ClassCounter from './components/ClassCounter';
 import HookCounter from './components/HookCounter';
@@ -13,6 +13,8 @@ import DataFetching from './components/DataFetching';
 import ComponentC from './components/ComponentC';
 
 function App() {
+  const UserContext = React.createContext();
+  const ChannelContext = React.createContext();
   return (
     <div className="App">
       {/* <ClassCounter/>
@@ -25,7 +27,11 @@ function App() {
       <MouseContainer/>
       <IntervalHookCounter/>
       <DataFetching/> */}
-      <ComponentC/>
+      <UserContext.Provider value='Sridhar'>
+        <ChannelContext.Provider value='Frontend'>
+          <ComponentC/>
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
