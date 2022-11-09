@@ -10,7 +10,7 @@ function DataFetching() {
       setPosts(res.data)
     })
     .catch(error => console.log(error))  
-  },[])
+  },[]) // [] <- dependency list
   return (
     <div>
       <ol>
