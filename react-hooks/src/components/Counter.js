@@ -10,7 +10,8 @@ function Counter() {
   const incrementTwo = () => {
     setCounerTwo(counterTwo + 1)
   }
-
+  // if you want to cache the function itself, you have to use 'useCallback' hook
+  // if you want to cache the result of the function then you have to use 'useMemo' hook
   const isEven = useMemo(() => {
     let i = 0
     while(i < 200000000) i++
