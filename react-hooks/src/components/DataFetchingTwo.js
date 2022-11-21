@@ -41,6 +41,7 @@ function DataFetchingTwo() {
     })
   }, [])
 
+  
   return (
     <div>
       {state.loading ? 'Loading': state.post.title}
