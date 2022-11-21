@@ -15,6 +15,7 @@ import CounterOne from './components/CounterOne';
 import CounterThree from './components/CounterThree';
 import ComponentA from './components/ComponentA';
 import ComponentB from './components/ComponentB';
+import DataFetchingOne from './components/DataFetchingOne';
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -56,10 +57,10 @@ function App() {
       </UserContext.Provider> */}
       {/* <CounterOne/> */}
       {/* <CounterThree/> */}
-      Count - {count}
-      <ComponentA/>
+      {/* <ComponentA/>
       <ComponentB/>
-      <ComponentC/>
+      <ComponentC/> */}
+      <DataFetchingOne/>
     </div>
     </CountContext.Provider>
   );
