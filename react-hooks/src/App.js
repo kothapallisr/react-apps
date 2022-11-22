@@ -20,6 +20,7 @@ import DataFetchingTwo from './components/DataFetchingTwo';
 import Counter from './components/Counter';
 import FocusInput from './components/FocusInput';
 import HookTimer from './components/HookTimer';
+import DocTitleOne from './components/DocTitleOne';
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -68,7 +69,8 @@ function App() {
       {/* <DataFetchingTwo/> */}
       {/* <Counter/> */}
       {/* <FocusInput/> */}
-      <HookTimer/>
+      {/* <HookTimer/> */}
+      <DocTitleOne/>
     </div>
     </CountContext.Provider>
   );
