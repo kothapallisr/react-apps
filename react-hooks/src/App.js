@@ -21,6 +21,7 @@ import Counter from './components/Counter';
 import FocusInput from './components/FocusInput';
 import HookTimer from './components/HookTimer';
 import DocTitleOne from './components/DocTitleOne';
+import CounterTwo from './components/CounterTwo';
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -70,7 +71,8 @@ function App() {
       {/* <Counter/> */}
       {/* <FocusInput/> */}
       {/* <HookTimer/> */}
-      <DocTitleOne/>
+      {/* <DocTitleOne/> */}
+      <CounterTwo/>
     </div>
     </CountContext.Provider>
   );
