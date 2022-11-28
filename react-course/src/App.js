@@ -1,23 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Job from './components/Job';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Job company="BMW" position='Test Driver' salary={69000}/>
+        <Job company="Porsche" position='Sr. Test Driver' salary={79000}/>
+        <Job company="Porsche" position='Chief Test Driver' salary={89000}/>
     </div>
   );
 }
