@@ -22,3 +22,5 @@ function multiplyByTwo(obj) {
 }
 multiplyByTwo(nums)
 console.log(nums)
+
+console.log([..."hello javascript"]) 
