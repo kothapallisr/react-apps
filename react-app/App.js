@@ -68,42 +68,112 @@ const element1 = React.createElement(
 
 // you need to have Babel inorder to make JSX work
 
-let messi = 10;
-
-const HeaderComponent = () => {
+const Title = () => {
   return (
-    <div>
-      {heading}
-      {Heading()}
-      {messi}
-      <h1>Hello React Functional Component</h1>
-      <h2>this is a h2 tag</h2>
+    <img
+      className="logo"
+      alt="logo"
+      src="https://content.jdmagicbox.com/comp/kurnool/k2/9999p8518.8518.220121104830.i4k2/catalogue/-ddu43zqnzt.jpg"
+    ></img>
+  );
+};
+const Header = () => {
+  return (
+    <div className="header">
+      <Title />
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+// Config driven UI
+
+// Virtual DOM - representation of a DOM
+// Reconciliation - (Diff algorithm) - on re-render the specific portion of your app which is found by Diff algorithm.
+// read this: "React Fiber" (it is introduced in React 16, new Reconciliation engine in React 16). Read this in github repository: github.com/acdlite/react-fiber-architecture
+// it is not recommended to use index as a "key"
+// no key << index key(ok way, use only if you don't have anything) << unique key (best practice)
+
+const restraunt = {
+  name: "Instawich",
+  image:
+    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/155e3a33e943393b2efe1cc937f8c2ec",
+  cusines: ["Snacks", "Beverages"],
+  rating: "4.3",
+};
+const RestrauntCard = () => {
+  return (
+    <div className="card">
+      <img src={restraunt.image}></img>
+      <h2>{restraunt.name}</h2>
+      <h3>{restraunt.cusines.join(", ")}</h3>
+      <h4>{restraunt.rating} stars</h4>
+    </div>
+  );
+};
+const Body = () => {
+  return (
+    <div className="restraunt-list">
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
+      <RestrauntCard />
     </div>
   );
 };
 
-const HeaderComponent2 = () => {
-  <div>
-    <h1>Hello React Functional Component</h1>
-    <h2>this is a h2 tag</h2>
-  </div>;
+const Footer = () => {
+  return <h3>Footer</h3>;
 };
 
-console.log(element1);
-const element2 = React.createElement(
-  "h2",
-  { id: "element2", key: "h2" },
-  "Element Two"
-);
-
+const AppLayout = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
+};
 // JSX - HTML like syntax
 const element3 = <h1>Hello React</h1>;
 
-const container = React.createElement("div", { id: "container" }, [
-  heading,
-  element1,
-  element2,
-  element3,
-]);
-root.render(<HeaderComponent />);
-//root.render(HeaderComponent());
+root.render(<AppLayout />);
+//root.render(Header());
